@@ -7,7 +7,6 @@ import time
 import random
 from discord import Game
 
-#TOKEN = ("NTk4OTIxMDU4OTIxNDgwMTkz.XSdtWg.XT7dfR6vNBdpWYwvSXEQLYfqJDQ")
 Client = discord.client
 client = commands.Bot(command_prefix = '!')
 Clientdiscord = discord.Client()
