@@ -6,9 +6,6 @@ import asyncio
 import random
 from itertools import cycle
 
-#TOKEN = process.env.BOT_TOKEN
-#TOKEN = 'NjAwMjgyODA2MzQxNDY4MTYx.XSxhug.CdE5SULghOlZyKIg7GvCmbxm-z8'
-
 client = commands.Bot(command_prefix='.')
 #client = discord.Client()
 
