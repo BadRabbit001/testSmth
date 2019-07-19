@@ -26,6 +26,7 @@ status = cycle(['with BadRabbit', 'with your connection', 'with other rabbits', 
 
 @client.event
 async def on_message(message):
+    message.content = message.content.lower()
     author = '{0.author.mention}'.format(message)
     # we do not want the bot to reply to itself
     if message.author == client.user:
