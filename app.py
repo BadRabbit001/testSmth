@@ -18,14 +18,11 @@ import asyncio
 import random
 from itertools import cycle
 
-#TOKEN = process.env.BOT_TOKEN
-#TOKEN = 'NjAwMjgyODA2MzQxNDY4MTYx.XSxhug.CdE5SULghOlZyKIg7GvCmbxm-z8'
-
 client = commands.Bot(command_prefix='.')
 #client = discord.Client()
 
 #create an arraylist containing phrases you want your bot to switch through.
-status = cycle(['with the &help command.', 'with the developers console', 'with some code', 'with JavaScript'])
+status = cycle(['with BadRabbit', 'with your connection', 'with other rabbits', 'with generator'])
 
 @client.event
 async def on_message(message):
