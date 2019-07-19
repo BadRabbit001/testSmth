@@ -55,15 +55,9 @@ async def on_message(message):
         randomlist = ['opt1','opt2','opt3']
         msg = 'Hello ' + author + '. Your link: '
         await message.channel.send(msg + (random.choice(randomlist)))
-     
+
         
-        
-@client.commands()
-async def kick(ctx, member : discord.Member, *, reason =None);
-    await member.kick(reason=reason)
-        
-        
-        
+             
 @client.event
 async def on_ready():
     print('Logged in as')
