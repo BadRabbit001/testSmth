@@ -18,7 +18,7 @@ import asyncio
 import random
 from itertools import cycle
 
-client = commands.Bot(command_prefix='.')
+client = commands.Bot(command_prefix='+')
 #client = discord.Client()
 
 #create an arraylist containing phrases you want your bot to switch through.
@@ -56,6 +56,12 @@ async def on_message(message):
         msg = 'Hello ' + author + '. Your link: '
         await message.channel.send(msg + (random.choice(randomlist)))
      
+        
+        
+@client.commands()
+async def kick(ctx, member : discord.Member, *, reason =None);
+    await member.kick(reason=reason)
+        
         
         
 @client.event
