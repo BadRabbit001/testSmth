@@ -29,11 +29,6 @@ async def on_message(message):
     if message.content.startswith('!fortnite'):
         randomlist = ['opt1','opt2','opt3']
         msg = 'Hello ' + author + '. Your link: '
-		
-	if message.content.startswith('!nord'):
-        randomlist = ['opt1','opt2','opt3']
-        msg = 'Hello ' + author + '. Your link: '
-        await message.channel.send(msg + (random.choice(randomlist)))
         await message.channel.send(msg + (random.choice(randomlist)))
 
 @client.event
