@@ -27,11 +27,18 @@ async def on_message(message):
         randomlist = ['opt1','opt2','opt3']
         msg = 'Hello ' + author + '. Your link: '
         await message.channel.send(msg + (random.choice(randomlist)))
+                
+    if message.content.startswith('!Spotify'):
+        randomlist = ['opt1','opt2','opt3']
+        msg = 'Hello ' + author + '. Your link: '
+        await message.channel.send(msg + (random.choice(randomlist)))
         
     if message.content.startswith('!nord'):
         randomlist = ['opt1','opt2','opt3']
         msg = 'Hello ' + author + '. Your link: '
         await message.channel.send(msg + (random.choice(randomlist)))
+        
+        
 
 @client.event
 async def on_ready():
