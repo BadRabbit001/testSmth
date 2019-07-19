@@ -1,33 +1,39 @@
+# Work with Python xxx
 import discord
-from discord.ext.commands import Bot
-from discord.ext import commands
+from discord.ext import commands, tasks
 import os
 import asyncio
-import time
-import random
-from discord import Game
+from itertools import cycle
 
-Client = discord.client
-client = commands.Bot(command_prefix = '!')
-Clientdiscord = discord.Client()
+#TOKEN = process.env.BOT_TOKEN
+#TOKEN = 'NjAwMjgyODA2MzQxNDY4MTYx.XSxhug.CdE5SULghOlZyKIg7GvCmbxm-z8'
 
+client = commands.Bot(command_prefix='.')
+#client = discord.Client()
 
-@client.event
-async def on_ready():
-    activity = discord.Game(name="with Generator")
-    await client.change_presence(status=discord.Status.idle, activity=activity)
-    print('Ready, Freddy') 
-
+#create an arraylist containing phrases you want your bot to switch through.
+status = cycle(['with the &help command.', 'with the developers console', 'with some code', 'with JavaScript'])
 
 @client.event
 async def on_message(message):
-    author = '{0.author.mention}'.format(message)
-    if message.content.startswith('!help'):
-        msg = author + ' visit #how-to-gen channel'
-        await message.channel.send(msg)
-    if message.content.startswith('!fortnite'):
-        randomlist = ["https://filemedia.net/27527/fortnite","https://up-to-down.net/27832/1","https://up-to-down.net/27527/fortnite02"]
-        msg = 'Hello python ' + author 
-        await message.channel.send(msg + (random.choice(randomlist)))
+    # we do not want the bot to reply to itself
+    if message.author == client.user:
+        return
 
-bot.run(NjAwNzMxNzUyNjA0MTA2Nzcx.XS7fEA.uyOPZ3SzQcks9TIf96dcV1ow4aw)
+    if message.content.startswith('!hello'):
+        msg = 'Hello python {0.author.mention}'.format(message)
+        await message.channel.send(msg)
+
+@client.event
+async def on_ready():
+    print('Logged in as')
+    print(client.user.name)
+    print(client.user.id)
+    print('------')
+    change_status.start()
+
+@tasks.loop(seconds=10)
+async def change_status():
+    await client.change_presence(activity=discord.Game(next(status)))
+
+client.run(os.getenv('BOT_TOKEN'))
