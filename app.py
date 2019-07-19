@@ -51,6 +51,12 @@ async def on_message(message):
         msg = 'Hello ' + author + '. Your link: '
         await message.channel.send(msg + (random.choice(randomlist)))
         
+    if message.content.startswith('!spotify'):
+        randomlist = ['opt1','opt2','opt3']
+        msg = 'Hello ' + author + '. Your link: '
+        await message.channel.send(msg + (random.choice(randomlist)))
+     
+        
         
 @client.event
 async def on_ready():
