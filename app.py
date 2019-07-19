@@ -54,20 +54,6 @@ async def on_message(message):
         
 @client.event
 async def on_ready():
-    print("Bot Was Deployed Sucessfully !")
-    while True:
-        await client.change_presence(game=Game(name='with BadRabbit'))
-        await asyncio.sleep(3)
-        await client.change_presence(game=Game(name='with Generator'))
-        await asyncio.sleep(3)
-        await client.change_presence(game=Game(name='this Server', type = 3))
-        await asyncio.sleep(3)
-        await client.change_presence(game=Game(name='Viktor Sheen', type = 2))
-        await asyncio.sleep(3)
-        
-        
-@client.event
-async def on_ready():
     print('Logged in as')
     print(client.user.name)
     print(client.user.id)
