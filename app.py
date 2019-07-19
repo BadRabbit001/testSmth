@@ -27,10 +27,6 @@ async def on_message(message):
 async def on_message(message):
     if message.content.startswith('!help'):
         await client.send_message(message.channel,'<@%s> visit #how-to-gen channel'  %(message.author.id))
-    if message.content.startswith('!fortnite'):
-        randomlist = ["https://filemedia.net/27527/fortnite","https://up-to-down.net/27832/1","https://up-to-down.net/27527/fortnite02"]
-        await client.send_message(message.author,"Your link to Fortnite accounts: " + (random.choice(randomlist)))
-        await client.send_message(message.channel,"Check your DM's")
     if message.content.startswith('!minecraft'):
         randomlist1 = ["https://link-to.net/27527/Minecraft001","https://up-to-down.net/27527/minecrafts","https://filemedia.net/27527/Minecraft"]
         await client.send_message(message.author,"Your link to Minecraft accounts: " + (random.choice(randomlist1)))
