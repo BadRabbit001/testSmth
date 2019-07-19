@@ -50,7 +50,6 @@ async def on_ready():
         await asyncio.sleep(3)
         
         
-        
 @client.event
 async def on_ready():
     print('Logged in as')
