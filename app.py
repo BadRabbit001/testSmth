@@ -1,10 +1,13 @@
 # Work with Python xxx
 import discord
+from discord.ext.commands import Bot
 from discord.ext import commands, tasks
 import os
 import asyncio
+import time
 import random
 from itertools import cycle
+from discord import Game
 
 client = commands.Bot(command_prefix='+')
 #client = discord.Client()
