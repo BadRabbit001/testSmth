@@ -33,10 +33,6 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith('!hello'):
-        msg = 'Hello python {0.author.mention}'.format(message)
-        await message.channel.send(msg + (random.choice(randomlist)))e.channel.send(msg)
-
     if message.content.startswith('!fortnite'):
         randomlist = ['test','test','test']
         msg = 'Hello ' + author + '. Your link: '
