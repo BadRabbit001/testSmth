@@ -33,7 +33,7 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith('!hello'):
+    if message.content.startswith('!Yo'):
         msg = 'Hello python {0.author.mention}'.format(message)
         await message.channel.send(msg)
 
@@ -57,7 +57,30 @@ async def on_message(message):
         msg = 'Hello ' + author + '. Your link: '
         await message.channel.send(msg + (random.choice(randomlist)))
         
-             
+    if message.content.startswith('!hello'):
+        msg = 'Hello python {0.author.mention}'.format(message)
+        await message.channel.send(msg)
+
+    if message.content.startswith('!apex'):
+        randomlist = ['opt1','opt2','opt3']
+        msg = 'Hello ' + author + '. Your link: '
+        await message.channel.send(msg + (random.choice(randomlist)))
+                
+    if message.content.startswith('!crunchyroll'):
+        randomlist = ['opt1','opt2','opt3']
+        msg = 'Hello ' + author + '. Your link: '
+        await message.channel.send(msg + (random.choice(randomlist)))
+        
+    if message.content.startswith('!hulu'):
+        randomlist = ['opt1','opt2','opt3']
+        msg = 'Hello ' + author + '. Your link: '
+        await message.channel.send(msg + (random.choice(randomlist)))
+        
+    if message.content.startswith('!udemy'):
+        randomlist = ['opt1','opt2','opt3']
+        msg = 'Hello ' + author + '. Your link: '
+        await message.channel.send(msg + (random.choice(randomlist)))
+            
 @client.event
 async def on_ready():
     print('Logged in as')
