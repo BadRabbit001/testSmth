@@ -1,17 +1,16 @@
 # Work with Python xxx
 import discord
-from discord.ext.commands import Bot
 from discord.ext import commands, tasks
 import os
 import asyncio
-import time
 import random
 from itertools import cycle
-from discord import Game
 
 client = commands.Bot(command_prefix='+')
 #client = discord.Client()
 
+#create an arraylist containing phrases you want your bot to switch through.
+status = cycle(['with BadRabbit', 'with your connection', 'with other rabbits', 'with generator'])
 
 
 @client.event
