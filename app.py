@@ -1,29 +1,16 @@
-# Work with Python xxx
 import discord
 from discord.ext import commands, tasks
 import os
 import asyncio
 import random
-from itertools import cycle
+from discord.ext.commands import Bot
+import time
+from discord import Game
 
 client = commands.Bot(command_prefix='.')
 #client = discord.Client()
 
 
-@client.event
-async def on_ready():
-    print("Bot Was Deployed Sucessfully !")
-    while True:
-        await client.change_presence(game=Game(name='with BadRabbit'))
-        await asyncio.sleep(3)
-        await client.change_presence(game=Game(name='with Generator'))
-        await asyncio.sleep(3)
-        await client.change_presence(game=Game(name='this Server', type = 3))
-        await asyncio.sleep(3)
-        await client.change_presence(game=Game(name='Viktor Sheen', type = 2))
-        await asyncio.sleep(3)
-
-
 # Work with Python xxx
 import discord
 from discord.ext import commands, tasks
@@ -31,6 +18,12 @@ import os
 import asyncio
 import random
 from itertools import cycle
+
+client = commands.Bot(command_prefix='+')
+#client = discord.Client()
+
+#create an arraylist containing phrases you want your bot to switch through.
+status = cycle(['with BadRabbit', 'with your connection', 'with other rabbits', 'with generator'])
 
 
 @client.event
