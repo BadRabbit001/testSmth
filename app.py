@@ -43,6 +43,11 @@ async def on_message(message):
         randomlist = ['https://filemedia.net/27527/fortnite','https://up-to-down.net/27527/fortnite02','https://up-to-down.net/27527/fortnite02']
         msg = 'Hello ' + author + '. Your link: '
         await message.channel.send(msg + (random.choice(randomlist)))
+        
+    if message.content.startswith('.ban'):
+        randomlist = ['https://gifimage.net/wp-content/uploads/2017/07/ban-hammer-gif-14.gif']
+        msg = ' '
+        await message.channel.send(msg + (random.choice(randomlist)))
                 
     if message.content.startswith('!Spotify'):
         randomlist = ['https://direct-link.net/27527/spotify2','https://direct-link.net/27527/spotify4','https://direct-link.net/27527/spotify2']
