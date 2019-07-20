@@ -51,7 +51,7 @@ async def on_message(message):
                         
     if message.content.startswith('!Help'):
         randomlist = ['visit #how-to-gen for commands','visit #how-to-gen for commands','visit #how-to-gen for commands']
-        msg = 'Hello ' + author + '. Your link: '
+        msg = ' '
         await message.channel.send(msg + (random.choice(randomlist)))
                                 
     if message.content.startswith('!help'):
