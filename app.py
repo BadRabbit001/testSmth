@@ -53,6 +53,11 @@ async def on_message(message):
         randomlist = ['visit #how-to-gen for commands','visit #how-to-gen for commands','visit #how-to-gen for commands']
         msg = 'Hello ' + author + '. Your link: '
         await message.channel.send(msg + (random.choice(randomlist)))
+                                
+    if message.content.startswith('!help'):
+        randomlist = ['visit #how-to-gen for commands','visit #how-to-gen for commands','visit #how-to-gen for commands']
+        msg = 'Hello ' + author + '. Your link: '
+        await message.channel.send(msg + (random.choice(randomlist)))
                             
     if message.content.startswith('!stock'):
         randomlist = ['visit #how-to-gen for commands','visit #how-to-gen for commands','visit #how-to-gen for commands']
