@@ -38,7 +38,7 @@ async def on_message(message):
         await message.channel.send(msg)
 
     if message.content.startswith('!fortnite'):
-        randomlist = ['opt1','opt2','opt3']
+        randomlist = ['test','test','test']
         msg = 'Hello ' + author + '. Your link: '
         await message.channel.send(msg + (random.choice(randomlist)))
                 
