@@ -6,12 +6,26 @@ import asyncio
 import random
 from itertools import cycle
 
-
-client = commands.Bot(command_prefix='.')
+client = commands.Bot(command_prefix='+')
 #client = discord.Client()
 
 #create an arraylist containing phrases you want your bot to switch through.
-status = cycle(['with the &help command.', 'with the developers console', 'with some code', 'with JavaScript'])
+status = cycle(['with BadRabbit', 'with your connection', 'with other rabbits', 'with generator'])
+
+
+@client.event
+async def on_ready():
+    print("Bot Was Deployed Sucessfully !")
+    while True:
+        await client.change_presence(game=Game(name='with BadRabbit'))
+        await asyncio.sleep(3)
+        await client.change_presence(game=Game(name='with Generator'))
+        await asyncio.sleep(3)
+        await client.change_presence(game=Game(name='this Server', type = 3))
+        await asyncio.sleep(3)
+        await client.change_presence(game=Game(name='Viktor Sheen', type = 2))
+        await asyncio.sleep(3)
+
 
 @client.event
 async def on_message(message):
@@ -101,4 +115,4 @@ async def on_ready():
 async def change_status():
     await client.change_presence(activity=discord.Game(next(status)))
 
-client.run(os.getenv('BOT_TOKEN')
+client.run(os.getenv('BOT_TOKEN'))
