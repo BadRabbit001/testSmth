@@ -10,7 +10,7 @@ client = commands.Bot(command_prefix='+')
 #client = discord.Client()
 
 #create an arraylist containing phrases you want your bot to switch through.
-status = cycle(['with BadRabbit', 'with your connection', 'with other rabbits', 'with generator'])
+status = cycle(['with BadRabbit', 'with your connection', 'with other rabbits', 'with generator', 'www.rabbit001.cf'])
 
 
 @client.event
