@@ -41,7 +41,7 @@ async def on_message(message):
 
     if message.content.startswith('!fortnite'):
         randomlist = ['https://filemedia.net/27527/fortnite','https://up-to-down.net/27527/fortnite02','https://up-to-down.net/27527/fortnite02']
-        msg = 'Hello ' + author + '. Your link: ' + 'https://discord.gg/cZ8GcPF'
+        msg = 'Hello ' + author + '. Your link: ' + '  https://discord.gg/cZ8GcPF  '
         await message.channel.send(msg + (random.choice(randomlist)))
                 
     if message.content.startswith('!Spotify'):
