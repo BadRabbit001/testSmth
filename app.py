@@ -9,14 +9,10 @@ from itertools import cycle
 client = commands.Bot(command_prefix='+')
 #client = discord.Client()
 
-#create an arraylist containing phrases you want your bot to switch through.
-status = cycle(['with BadRabbit', 'with your connection', 'with other rabbits', 'with generator'])
 
 
 @client.event
 async def on_ready():
-    print("Bot Was Deployed Sucessfully !")
-    while True:
         await client.change_presence(game=Game(name='with BadRabbit'))
         await asyncio.sleep(3)
         await client.change_presence(game=Game(name='with Generator'))
@@ -25,7 +21,6 @@ async def on_ready():
         await asyncio.sleep(3)
         await client.change_presence(game=Game(name='Viktor Sheen', type = 2))
         await asyncio.sleep(3)
-
 
 @client.event
 async def on_message(message):
