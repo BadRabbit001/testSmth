@@ -44,7 +44,7 @@ async def on_message(message):
         msg = 'Hello ' + author + '. Your link: '
         await message.channel.send(msg + (random.choice(randomlist)))
         
-    if message.content.startswith('.ban'):
+    if message.content.startswith('?ban'):
         randomlist = ['https://gifimage.net/wp-content/uploads/2017/07/ban-hammer-gif-14.gif']
         msg = ' '
         await message.channel.send(msg + (random.choice(randomlist)))
