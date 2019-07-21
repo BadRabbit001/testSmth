@@ -55,7 +55,7 @@ async def on_message(message):
         await message.channel.send(msg + (random.choice(randomlist)))
                         
     if message.content.startswith('!Help'):
-        randomlist = ['https://rabbit001.cf/bot/commands.html']
+        randomlist = ['https://rabbit001.cf/bot/commands.html invite me on your server now with this link: https://discord.gg/cZ8GcPF']
         msg = ' '
         await message.channel.send(msg + (random.choice(randomlist)))
                                 
