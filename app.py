@@ -29,6 +29,13 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
+    if message.content.startswith('!clear'):
+        tmp = await client.send_message(message.channel, 'Clearing messages...')
+        async for msg in client.logs_from(message.channel):
+            await client.delete_message(msg)
+        
+@client.event
+async def on_message(message):
     message.content = message.content.lower()
     author = '{0.author.mention}'.format(message)
     # we do not want the bot to reply to itself
