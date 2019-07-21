@@ -55,8 +55,8 @@ async def on_message(message):
         await message.channel.send(msg + (random.choice(randomlist)))
                         
     if message.content.startswith('!netflix'):
-        randomlist = ['I'm sorry, we don't have Netflix right now type /help for list of commands','I'm sorry, we don't have Netflix right now type /help for list of commands','I'm sorry, we don't have Netflix right now type /help for list of commands']
-        msg = 'author '
+        randomlist = ['I'm sorry, we don't have Netflix rn','I'm sorry, we don't have Netflix rn','I'm sorry, we don't have Netflix rn']
+        msg = 'Hello ' + author + '. Your link: '
         await message.channel.send(msg + (random.choice(randomlist)))
                         
     if message.content.startswith('!invite'):
