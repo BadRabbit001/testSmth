@@ -5,7 +5,6 @@ import os
 import asyncio
 import random
 from itertools import cycle
-from discord.ext.commands import Bot
 
 client = commands.Bot(command_prefix='+')
 #client = discord.Client()
@@ -13,15 +12,6 @@ client = commands.Bot(command_prefix='+')
 #create an arraylist containing phrases you want your bot to switch through.
 status = cycle(['with BadRabbit', 'with your connection', 'with other rabbits', 'with generator', 'www.rabbit001.cf'])
 
-@Client.command(pass_context = True)
-async def clear(ctx, number):
-    number = int(number) #Converting the amount of messages to delete to an integer
-    counter = 0
-    async for x in Client.logs_from(ctx.message.channel, limit = number):
-        if counter < number:
-            await Client.delete_message(x)
-            counter += 1
-            await asyncio.sleep(1.2) #1.2 second timer so the deleting process can be even
 
 @client.event
 async def on_ready():
@@ -35,7 +25,8 @@ async def on_ready():
         await asyncio.sleep(3)
         await client.change_presence(game=Game(name='Viktor Sheen', type = 2))
         await asyncio.sleep(3)
-        
+
+
 @client.event
 async def on_message(message):
     message.content = message.content.lower()
