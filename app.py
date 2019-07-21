@@ -54,13 +54,18 @@ async def on_message(message):
         msg = 'Hello ' + author + '. Your link: '
         await message.channel.send(msg + (random.choice(randomlist)))
                         
+    if message.content.startswith('!invite'):
+        randomlist = ['https://discordapp.com/api/oauth2/authorize?client_id=601772936604680192&permissions=8&scope=bot']
+        msg = 'Hello ' + author + '. Your link: '
+        await message.channel.send(msg + (random.choice(randomlist)))
+                        
     if message.content.startswith('!Help'):
-        randomlist = ['https://rabbit001.cf/bot/commands.html invite me on your server now with this link: https://discord.gg/cZ8GcPF']
+        randomlist = ['https://rabbit001.cf/bot/commands.html invite me on your server now with this link: https://discordapp.com/api/oauth2/authorize?client_id=601772936604680192&permissions=8&scope=bot']
         msg = ' '
         await message.channel.send(msg + (random.choice(randomlist)))
                                 
     if message.content.startswith('!help'):
-        randomlist = ['https://rabbit001.cf/bot/commands.html']
+        randomlist = ['https://rabbit001.cf/bot/commands.html invite me on your server now with this link: https://discord.gg/cZ8GcPF']
         msg = 'Hello ' + author + '. Your link: '
         await message.channel.send(msg + (random.choice(randomlist)))
                             
