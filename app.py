@@ -55,7 +55,7 @@ async def on_message(message):
         await message.channel.send(msg + (random.choice(randomlist)))
                         
     if message.content.startswith('!netflix'):
-        randomlist = ['I'm sorry, we don't have Netflix rn','I'm sorry, we don't have Netflix rn','I'm sorry, we don't have Netflix rn']
+        randomlist = ['we dont have Netflix, sorry']
         msg = 'Hello ' + author + '. Your link: '
         await message.channel.send(msg + (random.choice(randomlist)))
                         
