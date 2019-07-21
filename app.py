@@ -54,6 +54,11 @@ async def on_message(message):
         msg = 'Hello ' + author + '. Your link: '
         await message.channel.send(msg + (random.choice(randomlist)))
                         
+    if message.content.startswith('!netflix'):
+        randomlist = ['I'm sorry, we don't have Netflix right now type /help for list of commands','I'm sorry, we don't have Netflix right now type /help for list of commands','I'm sorry, we don't have Netflix right now type /help for list of commands']
+        msg = 'author '
+        await message.channel.send(msg + (random.choice(randomlist)))
+                        
     if message.content.startswith('!invite'):
         randomlist = ['https://discordapp.com/api/oauth2/authorize?client_id=601772936604680192&permissions=8&scope=bot']
         msg = 'Hello ' + author + '. Your link: '
