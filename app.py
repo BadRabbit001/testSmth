@@ -19,7 +19,7 @@ async def on_ready():
     while True:
         await client.change_presence(game=Game(name='with BadRabbit'))
         await asyncio.sleep(3)
-        await client.change_presence(game=Game(name='with Generator'))
+        await client.change_presence(game=Game(name='with Generator')
         await asyncio.sleep(3)
         await client.change_presence(game=Game(name='this Server', type = 3))
         await asyncio.sleep(3)
@@ -94,7 +94,7 @@ async def on_message(message):
         await message.channel.send(msg)
 
     if message.content.startswith('!origin'):
-        randomlist = ['https://link-to.net/27527/origin','https://up-to-down.net/27527/origin2','http://direct-link.net/27527/orogin3']
+        randomlist = ['https://link-to.net/27527/origin','https://link-to.net/27527/origin','http://link-to.net/27527/origin']
         msg = 'Hello ' + author + '. Your link: '
         await message.channel.send(msg + (random.choice(randomlist)))
                 
