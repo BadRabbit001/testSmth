@@ -131,7 +131,7 @@ async def on_message(message):
         await message.author.send("Yes please!?!")
         
         
-    if message.content.startswith('!clr'):
+    if message.content.startswith('!purge'):
         args = message.content.split(" ")
         a = int(args[1])
         await message.channel.purge(limit=a)
