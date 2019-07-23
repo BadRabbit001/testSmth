@@ -40,82 +40,82 @@ async def on_message(message):
 
     if message.content.startswith('!hello'):
         msg = 'Hello python {0.author.mention}'.format(message)
-        await message.channel.send(msg)
+        await message.author.send(msg)
 
     if message.content.startswith('!fortnite'):
         randomlist = ['https://filemedia.net/27527/fortnite','https://up-to-down.net/27527/fortnite02','https://up-to-down.net/27527/fortnite02']
         msg = 'Hello ' + author + '. Your link: '
-        await message.channel.send(msg + (random.choice(randomlist)))
+        await message.author.send(msg + (random.choice(randomlist)))
         
     if message.content.startswith('?ban'):
         randomlist = ['https://gifimage.net/wp-content/uploads/2017/07/ban-hammer-gif-14.gif']
-        msg = ' '
-        await message.channel.send(msg + (random.choice(randomlist)))
+        msg = ' '
+        await message.author.send(msg + (random.choice(randomlist)))
                 
     if message.content.startswith('!Spotify'):
         randomlist = ['https://direct-link.net/27527/spotify2','https://direct-link.net/27527/spotify4','https://direct-link.net/27527/spotify2']
         msg = 'Hello ' + author + '. Your link: '
-        await message.channel.send(msg + (random.choice(randomlist)))
+        await message.author.send(msg + (random.choice(randomlist)))
                             
     if message.content.startswith('!stock'):
         randomlist = ['visit #how-to-gen for commands','visit #how-to-gen for commands','visit #how-to-gen for commands']
         msg = 'Hello ' + author + '. Your link: '
-        await message.channel.send(msg + (random.choice(randomlist)))
+        await message.author.send(msg + (random.choice(randomlist)))
         
     if message.content.startswith('!nord'):
         randomlist = ['https://filemedia.net/27527/NordVPN','https://filemedia.net/27527/NordVPN2','https://filemedia.net/27527/NordVPN3']
         msg = 'Hello ' + author + '. Your link: '
-        await message.channel.send(msg + (random.choice(randomlist)))
+        await message.author.send(msg + (random.choice(randomlist)))
         
     if message.content.startswith('!spotify'):
         randomlist = ['https://direct-link.net/27527/spotify4','https://direct-link.net/27527/spotify4','https://direct-link.net/27527/spotify3']
         msg = 'Hello ' + author + '. Your link: '
-        await message.channel.send(msg + (random.choice(randomlist)))
+        await message.author.send(msg + (random.choice(randomlist)))
 
     if message.content.startswith('!origin'):
         randomlist = ['https://link-to.net/27527/origin','https://link-to.net/27527/origin','https://link-to.net/27527/origin']
         msg = 'Hello ' + author + '. Your link: '
-        await message.channel.send(msg + (random.choice(randomlist)))
+        await message.author.send(msg + (random.choice(randomlist)))
                 
     if message.content.startswith('!hulu'):
         randomlist = ['https://filemedia.net/27527/hulu2','https://filemedia.net/27527/hulu','https://filemedia.net/27527/hulu2']
         msg = 'Hello ' + author + '. Your link: '
-        await message.channel.send(msg + (random.choice(randomlist)))
+        await message.author.send(msg + (random.choice(randomlist)))
         
     if message.content.startswith('!steam'):
         randomlist = ['https://filemedia.net/27527/steam	','https://filemedia.net/27527/steam	','https://filemedia.net/27527/steam	']
         msg = 'Hello ' + author + '. Your link: '
-        await message.channel.send(msg + (random.choice(randomlist)))
+        await message.author.send(msg + (random.choice(randomlist)))
         
     if message.content.startswith('!udemy'):
         randomlist = ['https://filemedia.net/27527/udemy2','https://up-to-down.net/27527/udemy','https://up-to-down.net/27527/udemy']
         msg = 'Hello ' + author + '. Your link: '
-        await message.channel.send(msg + (random.choice(randomlist)))
+        await message.author.send(msg + (random.choice(randomlist)))
                 
     if message.content.startswith('!uplay'):
         randomlist = ['https://up-to-down.net/27527/uplay2','https://up-to-down.net/27527/uplay2','https://up-to-down.net/27527/uplay']
         msg = 'Hello ' + author + '. Your link: '
-        await message.channel.send(msg + (random.choice(randomlist)))
+        await message.author.send(msg + (random.choice(randomlist)))
         
     if message.content.startswith('!crunchyroll'):
         randomlist = ['https://up-to-down.net/27527/crunchyroll','https://up-to-down.net/27527/crunchyroll','https://up-to-down.net/27527/crunchyroll']
         msg = 'Hello ' + author + '. Your link: '
-        await message.channel.send(msg + (random.choice(randomlist)))
+        await message.author.send(msg + (random.choice(randomlist)))
                 
     if message.content.startswith('!scribd'):
         randomlist = ['https://direct-link.net/27527/Scribd','https://direct-link.net/27527/Scribd','https://direct-link.net/27527/Scribd']
         msg = 'Hello ' + author + '. Your link: '
-        await message.channel.send(msg + (random.choice(randomlist)))
+        await message.author.send(msg + (random.choice(randomlist)))
                         
     if message.content.startswith('!familyowner'):
         randomlist = ['https://direct-link.net/27527/familyowner','https://direct-link.net/27527/familyowner','https://direct-link.net/27527/familyowner']
         msg = 'Hello ' + author + '. Your link: '
-        await message.channel.send(msg + (random.choice(randomlist)))
+        await message.author.send(msg + (random.choice(randomlist)))
                                 
     if message.content.startswith('!minecraft'):
         randomlist = ['https://link-to.net/27527/Minecraft001','https://up-to-down.net/27527/minecrafts','https://filemedia.net/27527/Minecraft']
         msg = 'Hello ' + author + '. Your link: '
-        await message.channel.send(msg + (random.choice(randomlist)))
+        await message.author.send(msg + (random.choice(randomlist)))
         
     if message.content.startswith('!help'):
         await message.author.send("https://rabbit001.cf/bot/commands.html")
