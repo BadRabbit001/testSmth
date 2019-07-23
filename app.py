@@ -56,16 +56,6 @@ async def on_message(message):
         randomlist = ['https://direct-link.net/27527/spotify2','https://direct-link.net/27527/spotify4','https://direct-link.net/27527/spotify2']
         msg = 'Hello ' + author + '. Your link: '
         await message.channel.send(msg + (random.choice(randomlist)))
-                        
-    if message.content.startswith('!Help'):
-        randomlist = ['https://rabbit001.cf/bot/commands.html']
-        msg = ' '
-        await message.channel.send(msg + (random.choice(randomlist)))
-                                
-    if message.content.startswith('!help'):
-        randomlist = ['https://rabbit001.cf/bot/commands.html']
-        msg = 'Hello ' + author + '. Your link: '
-        await message.channel.send(msg + (random.choice(randomlist)))
                             
     if message.content.startswith('!stock'):
         randomlist = ['visit #how-to-gen for commands','visit #how-to-gen for commands','visit #how-to-gen for commands']
@@ -127,8 +117,8 @@ async def on_message(message):
         msg = 'Hello ' + author + '. Your link: '
         await message.channel.send(msg + (random.choice(randomlist)))
         
-    if message.content.startswith('!dm'):
-        await message.author.send("Yes please!?!")
+    if message.content.startswith('!help'):
+        await message.author.send("https://rabbit001.cf/bot/commands.html")
         
         
     if message.content.startswith('!purge'):
