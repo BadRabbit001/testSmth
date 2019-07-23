@@ -81,10 +81,6 @@ async def on_message(message):
         randomlist = ['https://direct-link.net/27527/spotify4','https://direct-link.net/27527/spotify4','https://direct-link.net/27527/spotify3']
         msg = 'Hello ' + author + '. Your link: '
         await message.channel.send(msg + (random.choice(randomlist)))
-        
-    if message.content.startswith('!hello'):
-        msg = 'Hello python {0.author.mention}'.format(message)
-        await message.channel.send(msg)
 
     if message.content.startswith('!origin'):
         randomlist = ['https://link-to.net/27527/origin','https://link-to.net/27527/origin','https://link-to.net/27527/origin']
