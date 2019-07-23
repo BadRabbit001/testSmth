@@ -50,7 +50,7 @@ async def on_message(message):
     if message.content.startswith('?ban'):
         randomlist = ['https://gifimage.net/wp-content/uploads/2017/07/ban-hammer-gif-14.gif']
         msg = ' '
-        await message.author.send(msg + (random.choice(randomlist)))
+        await message.channel.send(msg)
                 
     if message.content.startswith('!Spotify'):
         randomlist = ['https://direct-link.net/27527/spotify2','https://direct-link.net/27527/spotify4','https://direct-link.net/27527/spotify2']
