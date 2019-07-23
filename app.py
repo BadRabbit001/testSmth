@@ -48,8 +48,7 @@ async def on_message(message):
         await message.author.send(msg + (random.choice(randomlist)))
         
     if message.content.startswith('?ban'):
-        randomlist = ['https://gifimage.net/wp-content/uploads/2017/07/ban-hammer-gif-14.gif']
-        msg = ' '
+        msg = 'https://gifimage.net/wp-content/uploads/2017/07/ban-hammer-gif-14.gif'.format(message)
         await message.channel.send(msg)
                 
     if message.content.startswith('!Spotify'):
