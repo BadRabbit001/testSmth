@@ -128,7 +128,7 @@ async def on_message(message):
         msg = 'Hello ' + author + '. Your link: '
         await message.channel.send(msg + (random.choice(randomlist)))
         
-    if message.content.startswith('!private'):
+    if message.content.startswith('!dm'):
         await message.author.send("Yes please!?!")
         
 @client.event
