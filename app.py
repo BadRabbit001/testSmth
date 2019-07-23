@@ -127,7 +127,10 @@ async def on_message(message):
         randomlist = ['https://link-to.net/27527/Minecraft001','https://up-to-down.net/27527/minecrafts','https://filemedia.net/27527/Minecraft']
         msg = 'Hello ' + author + '. Your link: '
         await message.channel.send(msg + (random.choice(randomlist)))
-            
+        
+    if message.content.startswith('!private'):
+        await message.author.send("Yes please!?!")
+        
 @client.event
 async def on_ready():
     print('Logged in as')
