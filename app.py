@@ -130,6 +130,12 @@ async def on_message(message):
     if message.content.startswith('!dm'):
         await message.author.send("Yes please!?!")
         
+        
+    if message.content.startswith('!clr'):
+        args = message.content.split(" ")
+        a = int(args[1])
+        await message.channel.purge(limit=a)
+        
 @client.event
 async def on_ready():
     print('Logged in as')
