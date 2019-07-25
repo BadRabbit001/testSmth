@@ -5,12 +5,22 @@ import os
 import asyncio
 import random
 from itertools import cycle
+from discord.utils import get
 
 client = commands.Bot(command_prefix='!')
 #client = discord.Client()
 
 #create an arraylist containing phrases you want your bot to switch through.
 status = cycle(['with BlackRabbit', 'with your connection', 'with other rabbits', 'with generator', 'www.rabbit001.cf'])
+
+@client.command()
+async def lala(ctx):
+    check_role = get(ctx.message.guild.roles, name='Leader')
+    if check_role in ctx.author.roles:
+        await ctx.send("Yes, you are the leader.")
+
+    else:
+        await ctx.send("No, you are NOT the leader.")
 
 @client.command()
 async def clear(ctx, amount=5):
