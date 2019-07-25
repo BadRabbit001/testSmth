@@ -16,6 +16,14 @@ status = cycle(['with BlackRabbit', 'with your connection', 'with other rabbits'
 async def clear(ctx, amount=5):
     await ctx.channel.purge(limit=amount)
 
+@client.command()
+async def acc(ctx):
+    check_role = get(ctx.message.guild.roles, name='Seller')
+    if check_role in ctx.author.roles:
+        await ctx.send("your account: andrew@gmail.com:andrew789")
+    else:
+        await ctx.send("No, you are NOT the leader.")
+    
 @client.event
 async def on_ready():
     print("Bot Was Deployed Sucessfully !")
