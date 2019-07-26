@@ -11,9 +11,7 @@ client = commands.Bot(command_prefix='!')
 #client = discord.Client()
 
 #create an arraylist containing phrases you want your bot to switch through.
-status = cycle(['w BadRabbit', 'Viktor Sheen', 'PornHUB', 'with BadRabbit'])
-
-act = cycle([0, 1, 2, 3])
+status = cycle(['with the &help command.', 'with the developers console', 'with some code', 'with JavaScript'])
 
 @client.command()
 async def lala(ctx):
@@ -158,9 +156,8 @@ async def on_ready():
     print('------')
     change_status.start()
 
-@tasks.loop(seconds=2)
+@tasks.loop(seconds=5)
 async def change_status():
-    #await client.change_presence(activity=discord.Game(next(status)))
-    await client.change_presence(activity=discord.Activity(type=next(act), name=next(status)))
+    await client.change_presence(activity=discord.Game(next(status)))
 
 client.run(os.getenv('BOT_TOKEN'))
