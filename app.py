@@ -13,6 +13,8 @@ client = commands.Bot(command_prefix='!')
 #create an arraylist containing phrases you want your bot to switch through.
 status = cycle(['with BlackRabbit', 'with your connection', 'with other rabbits', 'with generator', 'www.rabbit001.cf'])
 
+act = cycle([0, 1, 2, 3])
+
 @client.command()
 async def lala(ctx):
     check_role = get(ctx.message.guild.roles, name='Leader')
@@ -158,6 +160,7 @@ async def on_ready():
 
 @tasks.loop(seconds=10)
 async def change_status():
-    await client.change_presence(activity=discord.Game(next(status)))
+    #await client.change_presence(activity=discord.Game(next(status)))
+    await client.change_presence(activity=discord.Activity(type=next(act), name=next(status)))
 
 client.run(os.getenv('BOT_TOKEN'))
