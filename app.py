@@ -11,7 +11,7 @@ client = commands.Bot(command_prefix='!')
 #client = discord.Client()
 
 #create an arraylist containing phrases you want your bot to switch through.
-status = cycle(['1', 'Viktor Sheen', '2', '3', '4'])
+status = cycle(['w BadRabbit', 'Viktor Sheen', '2', '3', '4'])
 
 act = cycle([0, 1, 2, 3, 2])
 
