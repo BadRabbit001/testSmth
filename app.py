@@ -13,7 +13,7 @@ client = commands.Bot(command_prefix='!')
 #create an arraylist containing phrases you want your bot to switch through.
 status = cycle(['w BadRabbit', 'Viktor Sheen', 'PornHUB', 'with BadRabbit'])
 
-act = cycle([0, 1, 2, 3, 2])
+act = cycle([0, 1, 2, 3])
 
 @client.command()
 async def lala(ctx):
