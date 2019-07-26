@@ -146,7 +146,8 @@ async def on_message(message):
         args = message.content.split(" ")
         a = int(args[1])
         await message.channel.purge(limit=a)
-
+    await client.process_commands(message)
+    
 @client.event
 async def on_ready():
     print('Logged in as')
