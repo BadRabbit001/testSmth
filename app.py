@@ -20,19 +20,19 @@ async def lala(ctx):
         await ctx.send("Yes, you are the leader.")
 
     else:
-        await ctx.send("No, you are NOT the leader.")
+        await ctx.send("You can't use this")
 
 @client.command()
 async def clear(ctx, amount=5):
     await ctx.channel.purge(limit=amount)
 
 @client.command()
-async def acc(ctx):
-    check_role = get(ctx.message.guild.roles, name='Seller')
+async def ban(ctx):
+    check_role = get(ctx.message.guild.roles, name='BAN-SQUAD')
     if check_role in ctx.author.roles:
-        await ctx.send("your account: andrew@gmail.com:andrew789")
+        await ctx.send("https://gifimage.net/wp-content/uploads/2017/07/ban-hammer-gif-14.gif")
     else:
-        await ctx.send("No, you are NOT the leader.")
+        await ctx.send("You can't use this")
     
 @client.event
 async def on_ready():
