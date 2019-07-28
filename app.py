@@ -61,9 +61,9 @@ async def on_message(message):
         await message.author.send(msg)
 
     if message.content.startswith('!fortnite'):
-        randomlist = ['https://filemedia.net/27527/fortnite','https://up-to-down.net/27527/fortnite02','https://up-to-down.net/27527/fortnite02']
+        randomlist = ['#1: https://filemedia.net/27527/fortnite #2 https://up-to-down.net/27527/fortnite02 #3: https://filemedia.net/27527/fortnite2']
         msg = 'Hello ' + author + '. Your link: '
-        await message.author.send(msg + (random.choice(randomlist)))
+        await message.author.send(msg + (random.choice(randomlist)
         
     if message.content.startswith('?ban'):
         msg = 'https://gifimage.net/wp-content/uploads/2017/07/ban-hammer-gif-14.gif'.format(message)
