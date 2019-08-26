@@ -51,7 +51,7 @@ async def on_message(message):
         msg = 'Hello python {0.author.mention}'.format(message)
         await message.author.send(msg)
         
-    if message.content.startswith('!help'):
+    if message.content.startswith('!commands'):
         await message.author.send("http://rabbit001.cf/commands.html")
         
     if message.content.startswith('!invite'):
