@@ -6,7 +6,6 @@ import asyncio
 import random
 from itertools import cycle
 from discord.utils import get
-import requests
 from discord import Game
 
 client = commands.Bot(command_prefix='!')
