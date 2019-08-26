@@ -48,12 +48,6 @@ async def on_ready():
         await client.change_presence(game=Game(name='Viktor Sheen', type = 2))
         await asyncio.sleep(3)
 
-        
-@client.event
-async def on_message(message):
-    if message.content.startswith('!help'):
-        embed = discord.Embed(title="Tile", description="Desc", color=0x00ff00)
-        await message.channel.send(message.channel, embed=embed)
 
 @client.event
 async def on_message(message):
