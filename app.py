@@ -14,15 +14,6 @@ client = commands.Bot(command_prefix='!')
 status = cycle(['www.rabbit001.cf', 'With BlackRabbit', 'with Generator', 'with accounts'])
 
 @client.command()
-async def lala(ctx):
-    check_role = get(ctx.message.guild.roles, name='Leader')
-    if check_role in ctx.author.roles:
-        await ctx.send("Yes, you are the leader.")
-
-    else:
-        await ctx.send("You can't use this")
-
-@client.command()
 async def clear(ctx, amount=5):
     await ctx.channel.purge(limit=amount)
 
@@ -59,6 +50,9 @@ async def on_message(message):
     if message.content.startswith('!hello'):
         msg = 'Hello python {0.author.mention}'.format(message)
         await message.author.send(msg)
+        
+    if message.content.startswith('!help'):
+        await message.author.send("For invite link visit http://rabbit001.cf/")
 
     if message.content.startswith('!fortnite'):
         randomlist = ['https://filemedia.net/27527/fortnite','https://up-to-down.net/27527/fortnite02','https://filemedia.net/27527/fortnite2']
