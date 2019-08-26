@@ -16,6 +16,8 @@ client = commands.Bot(command_prefix='!')
 #create an arraylist containing phrases you want your bot to switch through.
 status = cycle(['www.rabbit001.cf', 'With BlackRabbit', 'with Generator', 'with accounts', '!invite'])
 
+client.remove_command('help')'
+
 @client.command()
 async def clear(ctx, amount=5):
     await ctx.channel.purge(limit=amount)
@@ -26,7 +28,7 @@ async def ban(ctx):
     if check_role in ctx.author.roles:
         await ctx.send("https://gifimage.net/wp-content/uploads/2017/07/ban-hammer-gif-14.gif")
     else:
-        await ctx.send("You can't use this")
+        await ctx.send("You can't use this!")
  
 @client.event
 async def on_message(message):
