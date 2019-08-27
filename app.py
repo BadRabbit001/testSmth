@@ -16,7 +16,7 @@ client = commands.Bot(command_prefix='!')
 #create an arraylist containing phrases you want your bot to switch through.
 status = cycle(['www.rabbit001.cf', 'With BlackRabbit', 'with Generator', 'with accounts', '!invite'])
 
-client.remove_command('help')'
+client.remove_command('help')
 
 @client.command()
 async def clear(ctx, amount=5):
