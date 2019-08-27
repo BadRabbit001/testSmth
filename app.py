@@ -16,7 +16,7 @@ Clientdiscord = discord.Client()
 
 @client.event
 async def on_message(message):
-    if message.content.startswith('!help'):
+    if message.content.startswith('!cmds'):
         embed = discord.Embed(title="For more info visit http://rabbit001.cf", description="", color=0x00ff00)
         embed.add_field(name="commands:", value="for list of commands visit: http://rabbit001.cf/commands.html", inline=False)
         embed.add_field(name="U want invite my bot to ur server? Use this link:", value="https://discordapp.com/oauth2/authorize?client_id=604967241863397376&permissions=8&scope=bot", inline=False)
@@ -25,6 +25,7 @@ async def on_message(message):
 #create an arraylist containing phrases you want your bot to switch through.
 status = cycle(['www.rabbit001.cf', 'With BlackRabbit', 'with Generator', 'with accounts', '!invite'])
 
+client.remove_command('help')
 
 @client.command()
 async def clear(ctx, amount=5):
