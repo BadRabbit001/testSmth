@@ -23,7 +23,7 @@ async def on_message(message):
         await message.channel.send(message.channel, embed=embed)
 
 #create an arraylist containing phrases you want your bot to switch through.
-status = cycle(['www.rabbit001.cf', 'With BlackRabbit', 'with Generator', 'with accounts', '!invite'])
+status = cycle(['www.rabbit001.cf', 'With BlackRabbit', 'discord.gg/cZ8GcPF', '!cmds', '!invite'])
 
 client.remove_command('help')
 
@@ -78,6 +78,10 @@ async def on_message(message):
         
     if message.content.startswith('!invite'):
         await message.author.send("For invite link visit http://rabbit001.cf/")
+                
+    if message.content.startswith('!cmds'):
+        await message.author.send("**For more info visit:**                                                                                                                                                                                                                                                                                     - http://rabbit001.cf/                                                                                                                                                                                                                                                                                   **commands**                                                                                                                                                                                                                                                                                                                             -for list of commands visit:                                                                                                                                                                                                                                       http://rabbit001.cf/commands.html                                                                                                                                                                                                                                                                                    **U want invite my bot on your server?**                                                                                                                                                                                                                                                                                     -Use this link: https://discordapp.com/oauth2/authorize?client_id=604967241863397376&permissions=8&scope=bot")
+        
 
     if message.content.startswith('!fortnite'):
         randomlist = ['https://filemedia.net/27527/fortnite','https://up-to-down.net/27527/fortnite02','https://filemedia.net/27527/fortnite2']
