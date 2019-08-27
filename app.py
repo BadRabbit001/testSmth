@@ -23,7 +23,7 @@ async def on_message(message):
         await message.channel.send(message.channel, embed=embed)
 
 #create an arraylist containing phrases you want your bot to switch through.
-status = cycle(['www.rabbit001.cf', 'With BlackRabbit', 'discord.gg/cZ8GcPF', '!cmds', '!invite'])
+status = cycle(['www.rabbit001.cf', 'With BlackRabbit', 'discord.gg/cZ8GcPF', '!cmds', '!cmds'])
 
 client.remove_command('help')
 
