@@ -14,16 +14,8 @@ client = commands.Bot(command_prefix='!')
 #client = discord.Client()
 Clientdiscord = discord.Client()
 
-@client.event
-async def on_message(message):
-    if message.content.startswith('!cmds'):
-        embed = discord.Embed(title="For more info visit http://rabbit001.cf", description="", color=0x00ff00)
-        embed.add_field(name="commands:", value="for list of commands visit: http://rabbit001.cf/commands.html", inline=False)
-        embed.add_field(name="U want invite my bot to ur server? Use this link:", value="https://discordapp.com/oauth2/authorize?client_id=604967241863397376&permissions=8&scope=bot", inline=False)
-        await message.channel.send(message.channel, embed=embed)
-
 #create an arraylist containing phrases you want your bot to switch through.
-status = cycle(['www.rabbit001.cf', 'With BlackRabbit', 'discord.gg/cZ8GcPF', '!cmds', '!cmds'])
+status = cycle(['web: www.rabbit001.cf', 'With BlackRabbit', 'discord.gg/cZ8GcPF', '!cmds for commands', '!cmds'])
 
 client.remove_command('help')
 
@@ -38,14 +30,7 @@ async def ban(ctx):
         await ctx.send("https://gifimage.net/wp-content/uploads/2017/07/ban-hammer-gif-14.gif")
     else:
         await ctx.send("You can't use this!")
- 
-@client.event
-async def on_message(message):
-    if message.content.startswith('!helpME'):
-        embed = discord.Embed(title="For more info visit http://rabbit001.cf", description="", color=0x00ff00)
-        embed.add_field(name="commands:", value="for list of commands visit: http://rabbit001.cf/commands.html", inline=False)
-        embed.add_field(name="U want invite my bot to ur server? Use this link:", value="https://discordapp.com/oauth2/authorize?client_id=604967241863397376&permissions=8&scope=bot", inline=False)
-        await message.channel.send(message.channel, embed=embed)
+
 
 @client.event
 async def on_ready():
@@ -73,13 +58,16 @@ async def on_message(message):
         msg = 'Hello python {0.author.mention}'.format(message)
         await message.author.send(msg)
         
-    if message.content.startswith('!commands'):
-        await message.author.send("**For more info visit:**   - http://rabbit001.cf/   **commands:**  -for list of commands visit:  http://rabbit001.cf/commands.html         **U want invite my bot on your server?**     -Use this link: https://discordapp.com/oauth2/authorize?client_id=604967241863397376&permissions=8&scope=bot")
-        
+
     if message.content.startswith('!invite'):
         await message.author.send("For invite link visit http://rabbit001.cf/")
         
+    if message.content.startswith('!cmds'):
+        await message.author.send("For invite link visit http://rabbit001.cf/")
+        await message.author.send("For link of commands visit: http://rabbit001.cf/commands.html")
+        await message.author.send("Invite my bot via this link: https://discordapp.com/oauth2/authorize?client_id=604967241863397376&permissions=8&scope=bot")
 
+        
     if message.content.startswith('!fortnite'):
         randomlist = ['https://filemedia.net/27527/fortnite','https://up-to-down.net/27527/fortnite02','https://filemedia.net/27527/fortnite2']
         msg = 'Hello ' + author + '. Your link: '
