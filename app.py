@@ -78,9 +78,6 @@ async def on_message(message):
         
     if message.content.startswith('!invite'):
         await message.author.send("For invite link visit http://rabbit001.cf/")
-                
-    if message.content.startswith('!cmds'):
-        await message.author.send("**For more info visit:** - http://rabbit001.cf/  **commands:**   -for list of commands visit: http://rabbit001.cf/commands.html          **U want invite my bot on your server?**     -Use this link: https://discordapp.com/oauth2/authorize?client_id=604967241863397376&permissions=8&scope=bot")
         
 
     if message.content.startswith('!fortnite'):
