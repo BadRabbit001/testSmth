@@ -64,7 +64,7 @@ async def on_message(message):
         
     if message.content.startswith('!cmds'):
         await message.author.send("For invite link visit http://rabbit001.cf/")
-        await message.author.send("For link of commands visit: http://rabbit001.cf/commands.html")
+        await message.author.send("For list of commands visit: http://rabbit001.cf/commands.html")
         await message.author.send("Invite my bot via this link: https://discordapp.com/oauth2/authorize?client_id=604967241863397376&permissions=8&scope=bot")
 
         
