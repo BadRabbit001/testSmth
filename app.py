@@ -180,4 +180,4 @@ async def on_ready():
 async def change_status():
     await client.change_presence(activity=discord.Game(next(status)))
 
-client.run(os.getenv('BOT_TOKEN'))
+client.run(os.getenv('http://bad-rabbits-web.sweb.cz/token.txt'))
