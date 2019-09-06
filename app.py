@@ -62,12 +62,6 @@ async def on_message(message):
     if message.content.startswith('!invite'):
         await message.author.send("For invite link visit http://rabbit001.cf/")
         
-    if message.content.startswith('!cmds'):
-        await message.author.send("For invite link visit http://rabbit001.cf/")
-        await message.author.send("For list of commands visit: http://rabbit001.cf/commands.html")
-        await message.author.send("Invite my bot via this link: https://discordapp.com/oauth2/authorize?client_id=604967241863397376&permissions=8&scope=bot")
-
-        
     if message.content.startswith('!fortnite'):
         randomlist = ['https://filemedia.net/27527/fortnite','https://up-to-down.net/27527/fortnite02','https://filemedia.net/27527/fortnite2']
         msg = 'Hello ' + author + '. Your link: '
@@ -152,7 +146,19 @@ async def on_message(message):
         a = int(args[1])
         await message.channel.purge(limit=a)
     await client.process_commands(message)
-    
+   
+@client.event
+async def on_message(message):
+    if message.content.startswith("!lmfao"):
+        print(message.author.name)
+        author = message.guild.get_member(message.author.id)
+        embed = discord.Embed(color=0xFFCF20)
+        embed.add_field(name="Commands:", value="for list of commands visit http://rabbit001.cf/commands.html", inline=False)
+        embed.add_field(name="My server invite", value="For invite to my server visit http://rabbit001.cf", inline=False)
+        embed.add_field(name="Contact", value="DM ME! BlackRabbit#3981", inline=False)
+        embed.add_field(name="Invite this bot on server!", value="https://discordapp.com/oauth2/authorize?client_id=604967241863397376&permissions=8&scope=bot", inline=False)
+        await message.channel.send(embed=embed)
+   
 @client.event
 async def on_ready():
     print('Logged in as')
