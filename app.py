@@ -149,7 +149,7 @@ async def on_message(message):
    
 @client.event
 async def on_message(message):
-    if message.content.startswith("!lmfao"):
+    if message.content.startswith("!cmds"):
         print(message.author.name)
         author = message.guild.get_member(message.author.id)
         embed = discord.Embed(color=0xFFCF20)
