@@ -62,6 +62,20 @@ async def on_message(message):
         embed.add_field(name="Your link:", value="https://filemedia.net/27527/NordVPN", inline=False)
         embed.add_field(name="Invite this bot on your server!", value="https://discordapp.com/oauth2/authorize?client_id=604967241863397376&permissions=8&scope=bot", inline=False)
         await message.author.send(embed=embed)     
+        
+    if message.content.startswith("!cmds"):
+        print(message.author.name)
+        embed = discord.Embed(title="**COMMANDS**", color=0xFF09D7)
+        embed.add_field(name="Visit my website for list of commands:", value="http://rabbit001.cf/commands.html", inline=False)
+        embed.add_field(name="Invite this bot on your server!", value="https://discordapp.com/oauth2/authorize?client_id=604967241863397376&permissions=8&scope=bot", inline=False)
+        await message.author.send(embed=embed)
+        
+    if message.content.startswith("!commands"):
+        print(message.author.name)
+        embed = discord.Embed(title="**COMMANDS**", color=0xFF09D7)
+        embed.add_field(name="Visit my website for list of commands:", value="http://rabbit001.cf/commands.html", inline=False)
+        embed.add_field(name="Invite this bot on your server!", value="https://discordapp.com/oauth2/authorize?client_id=604967241863397376&permissions=8&scope=bot", inline=False)
+        await message.author.send(embed=embed)
 
         
     if message.content.startswith("!minecrafts"):
@@ -151,7 +165,7 @@ async def on_message(message):
 
     if message.content.startswith("!"):
         print(message.author.name)
-        embed = discord.Embed(title="`Accounts sent to you DMs man!`", color=0xaeff84)
+        embed = discord.Embed(title="`Check your DMs man!`", color=0xaeff84)
         await message.channel.send(embed=embed)
    
 @client.event
