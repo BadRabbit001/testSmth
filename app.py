@@ -105,7 +105,7 @@ async def on_message(message):
         await message.channel.send(msg)
 
         
-    if message.content.startswith("!minecrafts"):
+    if message.content.startswith("!minecraft"):
         print(message.author.name)
         embed = discord.Embed(title="`Minecraft acc`", color=0x400cc1)
         embed.add_field(name="Your link:", value="https://link-to.net/27527/Minecraft001", inline=False)
