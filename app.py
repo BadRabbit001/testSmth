@@ -166,7 +166,7 @@ async def on_message(message):
         await message.channel.send('Check your DMs!')
 		
 				        
- if message.content.startswith("!Spotify"):
+ if message.content.startswith("!spotify"):
         print(message.author.name)
         embed = discord.Embed(title="`Spotify acc`", color=0x400cc1)
         embed.add_field(name="Your link:", value="https://direct-link.net/27527/spotify4", inline=False)
