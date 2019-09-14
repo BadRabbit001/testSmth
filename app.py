@@ -10,6 +10,9 @@ from discord.utils import get
 from discord import Game
 import os
 
+
+msgg = '```Check your DMs man!```'
+
 client = commands.Bot(command_prefix='!')
 #client = discord.Client()
 Clientdiscord = discord.Client()
@@ -44,26 +47,29 @@ async def on_ready():
     await client.change_presence(status=discord.Status.online, activity=game)
 
 
-
 @client.event
 async def on_message(message):
-    message.content = message.content.lower().replace(' ', '')
-    msg = '```Check your DMs man!```'
-    if message.content.startswith("!hello"):
+ msgg = '```Video tutorial:``` http://rabbit001.cf/tutorial/video.html '
+ message.content = message.content.lower().replace(' ', '')
+ await message.author.send(msgg)
+ if message.content.startswith("!hello"):
         print(message.author.name)
         embed = discord.Embed(color=0xFF09D7)
         embed.add_field(name="Invite this bot on your server!", value="https://discordapp.com/oauth2/authorize?client_id=604967241863397376&permissions=8&scope=bot", inline=False)
         await message.author.send(embed=embed)
-     
-    if message.content.startswith("!invite"):
+ 
+ 
+ if message.content.startswith("!invite"):
         print(message.author.name)
         msg = 'I sent invite link into your DMs man!'
         embed = discord.Embed(color=0xFF09D7)
+        await message.channel.send(msg)
         embed.add_field(name="Invite this bot on your server!", value="https://discordapp.com/oauth2/authorize?client_id=604967241863397376&permissions=8&scope=bot", inline=False)
         await message.author.send(embed=embed) 
-        await message.channel.send(msg)
+        await message.author.send(msgg)
+	
         
-    if message.content.startswith("!stock"):
+ if message.content.startswith("!stock"):
         print(message.author.name)
         msg = 'Check DMs!'
         embed = discord.Embed(color=0xFF09D7)
@@ -71,7 +77,7 @@ async def on_message(message):
         await message.author.send(embed=embed) 
         await message.channel.send(msg)
         
-    if message.content.startswith("!scribd"):
+ if message.content.startswith("!scribd"):
         print(message.author.name)
         msg = '```Check your DMs man!```'
         embed = discord.Embed(title="`Scrib acc`", color=0x840055)
@@ -80,23 +86,25 @@ async def on_message(message):
         await message.author.send(embed=embed)
         await message.channel.send(msg)
         
-    if message.content.startswith("!nord"):
+ if message.content.startswith("!nord"):
         print(message.author.name)
         embed = discord.Embed(title="`NordVPN acc`", color=0xFF09D7)
         embed.add_field(name="Your link:", value="https://filemedia.net/27527/NordVPN", inline=False)
         embed.add_field(name="Invite this bot on your server!", value="https://discordapp.com/oauth2/authorize?client_id=604967241863397376&permissions=8&scope=bot", inline=False)
         await message.author.send(embed=embed)  
-        await message.channel.send(msg)        
+        await message.channel.send(msg)
+        await message.author.send(video)
         
-    if message.content.startswith("!cmds"):
+ if message.content.startswith("!cmds"):
         print(message.author.name)
         embed = discord.Embed(title="**COMMANDS**", color=0xFF09D7)
         embed.add_field(name="Visit my website for list of commands:", value="http://rabbit001.cf/commands.html", inline=False)
         embed.add_field(name="Invite this bot on your server!", value="https://discordapp.com/oauth2/authorize?client_id=604967241863397376&permissions=8&scope=bot", inline=False)
         await message.author.send(embed=embed)
         await message.channel.send(msg)
+		
         
-    if message.content.startswith("!commands"):
+ if message.content.startswith("!commands"):
         print(message.author.name)
         embed = discord.Embed(title="**COMMANDS**", color=0xFF09D7)
         embed.add_field(name="Visit my website for list of commands:", value="http://rabbit001.cf/commands.html", inline=False)
@@ -105,7 +113,7 @@ async def on_message(message):
         await message.channel.send(msg)
 
         
-    if message.content.startswith("!minecraft"):
+ if message.content.startswith("!minecraft"):
         print(message.author.name)
         embed = discord.Embed(title="`Minecraft acc`", color=0x400cc1)
         embed.add_field(name="Your link:", value="https://link-to.net/27527/Minecraft001", inline=False)
@@ -114,9 +122,8 @@ async def on_message(message):
         embed.add_field(name="Invite this bot on your server!", value="https://discordapp.com/oauth2/authorize?client_id=604967241863397376&permissions=8&scope=bot", inline=False)
         await message.author.send(embed=embed)
         await message.channel.send(msg)
-        
 
-    if message.content.startswith("!hulu"):
+ if message.content.startswith("!hulu"):
         print(message.author.name)
         embed = discord.Embed(title="`Hulu acc`", color=0x40cc55)
         embed.add_field(name="Your link:", value="https://filemedia.net/27527/hulu2", inline=False)
@@ -126,16 +133,17 @@ async def on_message(message):
         await message.channel.send(msg)
         
         
-    if message.content.startswith("!origin"):
+ if message.content.startswith("!origin"):
         print(message.author.name)
         embed = discord.Embed(title="`Origin acc`", color=668000)
         embed.add_field(name="Your link:", value="https://link-to.net/27527/Origin", inline=False)
         embed.add_field(name="Your link:", value="https://direct-link.net/27527/Origin3", inline=False)
         embed.add_field(name="Invite this bot on your server!", value="https://discordappf.com/oauth2/authorize?client_id=604967241863397376&permissions=8&scope=bot", inline=False)
         await message.author.send(embed=embed)
+        await message.author.send(video)
         await message.channel.send(msg)
 
-    if message.content.startswith("!uplay"):
+ if message.content.startswith("!uplay"):
         print(message.author.name)
         embed = discord.Embed(title="`Uplay acc`", color=0x666644)
         embed.add_field(name="Your link:", value="https://up-to-down.net/27527/uplay", inline=False)
@@ -143,16 +151,17 @@ async def on_message(message):
         await message.author.send(embed=embed)
         await message.channel.send(msg)
 
-    if message.content.startswith("!fortnite"):
+ if message.content.startswith("!fortnite"):
         print(message.author.name)
         embed = discord.Embed(title="`Fortnite acc`", color=0x296666)
         embed.add_field(name="Your link:", value="https://filemedia.net/27527/fortnite", inline=False)
         embed.add_field(name="Your link:", value="https://filemedia.net/27527/fortnite2", inline=False)
         embed.add_field(name="Invite this bot on your server!", value="https://discordapfp.com/oauth2/authorize?client_id=60496724186339f7376&permissions=8&scope=bot", inline=False)
+        await message.author.send(video)
         await message.author.send(embed=embed)
         await message.channel.send(msg)
         
-    if message.content.startswith("!steam"):
+ if message.content.startswith("!steam"):
         print(message.author.name)
         embed = discord.Embed(title="`Steam acc`", color=0x796666)
         embed.add_field(name="Your link:", value="https://filemedia.net/27527/Steam", inline=False)
@@ -160,7 +169,7 @@ async def on_message(message):
         await message.author.send(embed=embed) 
         await message.channel.send(msg)
         
-    if message.content.startswith("!spotify"):
+ if message.content.startswith("!spotify"):
         print(message.author.name)
         embed = discord.Embed(title="`Spotify acc`", color=0x996666)
         embed.add_field(name="Your link:", value="https://direct-link.net/27527/spotify4", inline=False)
@@ -168,7 +177,7 @@ async def on_message(message):
         await message.author.send(embed=embed) 
         await message.channel.send(msg)
         
-    if message.content.startswith("!udemy"):
+ if message.content.startswith("!udemy"):
         print(message.author.name)
         embed = discord.Embed(title="`Udemy acc`", color=0x550000)
         embed.add_field(name="Your link:", value="https://filemedia.net/27527/udemy2", inline=False)
@@ -178,7 +187,7 @@ async def on_message(message):
         await message.channel.send(msg)
 
         
-    if message.content.startswith("!pinterest"):
+ if message.content.startswith("!pinterest"):
         print(message.author.name)
         embed = discord.Embed(title="`Pinterest acc`", color=0x8400bb)
         embed.add_field(name="Your link:", value="https://link-to.net/27527/pinterest", inline=False)
@@ -186,7 +195,7 @@ async def on_message(message):
         await message.author.send(embed=embed)
         await message.channel.send(msg)
         
-    if message.content.startswith("!familyowner"):
+ if message.content.startswith("!familyowner"):
         print(message.author.name)
         embed = discord.Embed(title="`Spotify - family owner accs`", color=0xff8400)
         embed.add_field(name="Your link:", value="https://direct-link.net/27527/familyowner", inline=False)
