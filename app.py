@@ -10,7 +10,6 @@ from discord.utils import get
 from discord import Game
 import os
 
-tut = 'pes'
 
 msgg = '```Check your DMs man!```'
 
@@ -109,7 +108,7 @@ async def on_message(message):
         embed.add_field(name="Your link:", value="https://link-to.net/27527/Minecraft001", inline=False)
         embed.add_field(name="Link #2:", value="https://filemedia.net/27527/Minecraft", inline=False)
         embed.add_field(name="Link #3:", value="https://up-to-down.net/27527/minecrafts", inline=False)
-        embed.add_field(name="`Tutorial:`", value="https://youtu.be/kJbWiPKP_gg", inline=False)
+        embed.add_field(name="`__**Tutorial:**__`", value="https://youtu.be/kJbWiPKP_gg", inline=False)
         embed.add_field(name="Invite this bot on your server!", value="https://discordapp.com/oauth2/authorize?client_id=604967241863397376&permissions=8&scope=bot", inline=False)
         await message.author.send(embed=embed)
         await message.channel.send('Check your DMs!')
@@ -120,7 +119,7 @@ async def on_message(message):
         embed = discord.Embed(title="`Hulu acc`", color=0x400cc1)
         embed.add_field(name="Your link:", value="https://filemedia.net/27527/hulu2", inline=False)
         embed.add_field(name="Link #2:", value="https://filemedia.net/27527/hulu", inline=False)
-        embed.add_field(name="`Tutorial:`", value="https://youtu.be/kJbWiPKP_gg", inline=False)
+        embed.add_field(name="`__**Tutorial:**__`", value="https://youtu.be/kJbWiPKP_gg", inline=False)
         embed.add_field(name="Invite this bot on your server!", value="https://discordapp.com/oauth2/authorize?client_id=604967241863397376&permissions=8&scope=bot", inline=False)
         await message.author.send(embed=embed)
         await message.channel.send('Check your DMs!')
@@ -131,7 +130,7 @@ async def on_message(message):
         embed = discord.Embed(title="`Origin acc`", color=0x400cc1)
         embed.add_field(name="Your link:", value="https://link-to.net/27527/Origin", inline=False)
         embed.add_field(name="Link #2:", value="https://direct-link.net/27527/Origin3", inline=False)
-        embed.add_field(name="`Tutorial:`", value="https://youtu.be/kJbWiPKP_gg", inline=False)
+        embed.add_field(name="`__**Tutorial:**__`", value="https://youtu.be/kJbWiPKP_gg", inline=False)
         embed.add_field(name="Invite this bot on your server!", value="https://discordapp.com/oauth2/authorize?client_id=604967241863397376&permissions=8&scope=bot", inline=False)
         await message.author.send(embed=embed)
         await message.channel.send('Check your DMs!')
@@ -141,7 +140,7 @@ async def on_message(message):
         print(message.author.name)
         embed = discord.Embed(title="`Uplay acc`", color=0x400cc1)
         embed.add_field(name="Your link:", value="https://up-to-down.net/27527/uplay", inline=False)
-        embed.add_field(name="`Tutorial:`", value="https://youtu.be/kJbWiPKP_gg", inline=False)
+        embed.add_field(name="`__**Tutorial:**__`", value="https://youtu.be/kJbWiPKP_gg", inline=False)
         embed.add_field(name="Invite this bot on your server!", value="https://discordapp.com/oauth2/authorize?client_id=604967241863397376&permissions=8&scope=bot", inline=False)
         await message.author.send(embed=embed)
         await message.channel.send('Check your DMs!')
@@ -150,7 +149,7 @@ async def on_message(message):
         print(message.author.name)
         embed = discord.Embed(title="`Steam acc`", color=0x400cc1)
         embed.add_field(name="Your link:", value="https://filemedia.net/27527/Steam", inline=False)
-        embed.add_field(name="`Tutorial:`", value="https://youtu.be/kJbWiPKP_gg", inline=False)
+        embed.add_field(name="`__**Tutorial:**__`", value="https://youtu.be/kJbWiPKP_gg", inline=False)
         embed.add_field(name="Invite this bot on your server!", value="https://discordapp.com/oauth2/authorize?client_id=604967241863397376&permissions=8&scope=bot", inline=False)
         await message.author.send(embed=embed)
         await message.channel.send('Check your DMs!')
@@ -161,7 +160,7 @@ async def on_message(message):
         embed = discord.Embed(title="`Fortnite acc`", color=0x400cc1)
         embed.add_field(name="Your link:", value="https://filemedia.net/27527/fortnite", inline=False)
         embed.add_field(name="Link #2:", value="https://filemedia.net/27527/fortnite2", inline=False)
-        embed.add_field(name="`Tutorial:`", value="https://youtu.be/kJbWiPKP_gg", inline=False)
+        embed.add_field(name="`__**Tutorial:**__`", value="https://youtu.be/kJbWiPKP_gg", inline=False)
         embed.add_field(name="Invite this bot on your server!", value="https://discordapp.com/oauth2/authorize?client_id=604967241863397376&permissions=8&scope=bot", inline=False)
         await message.author.send(embed=embed)
         await message.channel.send('Check your DMs!')
@@ -172,7 +171,7 @@ async def on_message(message):
         embed = discord.Embed(title="`Spotify acc`", color=0x400cc1)
         embed.add_field(name="Your link:", value="https://direct-link.net/27527/spotify4", inline=False)
         embed.add_field(name="Link #2:", value="https://direct-link.net/27527/spotify3", inline=False)
-        embed.add_field(name="`Tutorial:`", value="https://youtu.be/kJbWiPKP_gg", inline=False)
+        embed.add_field(name="`__**Tutorial:**__`", value="https://youtu.be/kJbWiPKP_gg", inline=False)
         embed.add_field(name="Invite this bot on your server!", value="https://discordapp.com/oauth2/authorize?client_id=604967241863397376&permissions=8&scope=bot", inline=False)
         await message.author.send(embed=embed)
         await message.channel.send('Check your DMs!')
@@ -181,7 +180,7 @@ async def on_message(message):
         print(message.author.name)
         embed = discord.Embed(title="`NordVPN acc`", color=0x400cc1)
         embed.add_field(name="Your link:", value="https://filemedia.net/27527/NordVPN", inline=False)
-        embed.add_field(name="`Tutorial:`", value="https://youtu.be/kJbWiPKP_gg", inline=False)
+        embed.add_field(name="__**Tutorial:**__", value="https://youtu.be/kJbWiPKP_gg", inline=False)
         embed.add_field(name="Invite this bot on your server!", value="https://discordapp.com/oauth2/authorize?client_id=604967241863397376&permissions=8&scope=bot", inline=False)
         await message.author.send(embed=embed)
         await message.channel.send('Check your DMs!')
@@ -200,7 +199,7 @@ async def on_message(message):
         embed = discord.Embed(title="`Udemy acc`", color=0x400cc1)
         embed.add_field(name="Your link:", value="https://filemedia.net/27527/udemy2", inline=False)
         embed.add_field(name="Link #2:", value="https://up-to-down.net/27527/udemy", inline=False)
-        embed.add_field(name="`Tutorial:`", value="https://youtu.be/kJbWiPKP_gg", inline=False)
+        embed.add_field(name="`__**Tutorial:**__`", value="https://youtu.be/kJbWiPKP_gg", inline=False)
         embed.add_field(name="Invite this bot on your server!", value="https://discordapp.com/oauth2/authorize?client_id=604967241863397376&permissions=8&scope=bot", inline=False)
         await message.author.send(embed=embed)
         await message.channel.send('Check your DMs!') 		
@@ -245,6 +244,6 @@ async def on_ready():
 
 @tasks.loop(seconds=5)
 async def change_status():
-    await client.change_presence(activity=discord.Game(next(status)))
+    await client.change_presence(activity=discord.Game(next(status))))
 
 client.run(os.getenv('BOT_TOKEN'))
