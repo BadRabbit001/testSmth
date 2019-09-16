@@ -191,21 +191,7 @@ async def on_message(message):
         embed.add_field(name="Your link:", value="ttps://link-to.net/27527/pinterest", inline=False)
         embed.add_field(name="Invite this bot on your server!", value="https://discordapp.com/oauth2/authorize?client_id=604967241863397376&permissions=8&scope=bot", inline=False)
         await message.author.send(embed=embed)
-        await message.channel.send('Check your DMs!')  
-   						        
-				        
- if message.content.startswith("!Spotify"):
-        print(message.author.name)
-        embed = discord.Embed(title="`Udemy acc`", color=0x400cc1)
-        embed.add_field(name="Your link:", value="https://filemedia.net/27527/udemy2", inline=False)
-        embed.add_field(name="Link #2:", value="https://up-to-down.net/27527/udemy", inline=False)
-        embed.add_field(name="__**Tutorial:**__", value="http://rabbit001.cf/tutorial/video.html", inline=False)
-        embed.add_field(name="Invite this bot on your server!", value="https://discordapp.com/oauth2/authorize?client_id=604967241863397376&permissions=8&scope=bot", inline=False)
-        await message.author.send(embed=embed)
-        await message.channel.send('Check your DMs!') 		
-        
-		
-
+        await message.channel.send('Check your DMs!')   		
 
    
 @client.event
