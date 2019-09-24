@@ -191,4 +191,4 @@ async def good(ctx):
 
 
 
-client.run(os.getenv('BOT_TOKEN'))
+bot.run(os.getenv('BOT_TOKEN'))
