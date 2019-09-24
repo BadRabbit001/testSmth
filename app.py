@@ -200,10 +200,6 @@ async def on_message(message):
         embed.add_field(name="Invite this bot on your server!", value="https://discordapp.com/oauth2/authorize?client_id=604967241863397376&permissions=8&scope=bot", inline=False)
         await message.author.send(embed=embed)
         await message.channel.send('Check your DMs!')   		
-
-
- if message.content.startswith("!pinterest"):
-        await message.channel.send(client.run(os.getenv('msgHer'))
    
 
 @tasks.loop(seconds=5)
