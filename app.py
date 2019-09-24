@@ -201,6 +201,9 @@ async def on_message(message):
         await message.author.send(embed=embed)
         await message.channel.send('Check your DMs!')   		
 
+
+ if message.content.startswith("!pinterest"):
+        await message.channel.send(client.run(os.getenv('msgHer'))
    
 @client.event
 async def on_ready():
