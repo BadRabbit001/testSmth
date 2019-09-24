@@ -205,29 +205,6 @@ async def on_message(message):
  if message.content.startswith("!pinterest"):
         await message.channel.send(client.run(os.getenv('msgHer'))
    
-@client.event
-async def on_ready():
-    print('Logged in as')
-    print(client.user.name)
-    print(client.user.id)
-    print('------')
-    print(' ____  _            _    ____       _     _     _ _    ___   ___  _')
-    print('| __ )| | __ _  ___| | _|  _ \ __ _| |__ | |__ (_) |_ / _ \ / _ \/ |')
-    print('|  _ \| |/ _` |/ __| |/ / |_) / _` |  _ \|  _ \| | __| | | | | | | |')
-    print('| |_) | | (_| | (__|   <|  _ < (_| | |_) | |_) | | |_| |_| | |_| | |')
-    print('|____/|_|\__,_|\___|_|\_\_| \_\__,_|_.__/|_.__/|_|\__|\___/ \___/|_|')
-    print('====================================================================')
-    print('“Hacking is a talent. You will not learn it at school. It is like being Messi or C.Ronaldo.')
-    print('If you were born to become a Hacker, it is your destiny. Otherwise, you will be Hacked.”')
-    print('― Amine Essiraj')
-    print('===========================================================================================')
-    print('“Shvatio sam… Da nema čoveka, kompjuter ne bi postojao. Da nema kompjutera,')
-    print('mnogi ljudi ne bi naučili šta znači biti čovek.”')
-    print('― Tamara Kučan, PROFAJLER')
-    print('===========================================================================')
-    print('Never tell everything you know...')
-    print('=================================')
-    change_status.start()
 
 @tasks.loop(seconds=5)
 async def change_status():
