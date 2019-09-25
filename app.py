@@ -174,7 +174,7 @@ async def hola(ctx):
             
 @bot.command()
 async def gay(ctx):
-    msg_help = 'You are gay you fucking idiot! Suck me!`'
+    msg_help = '__You are gay you fucking idiot! Suck me!__'
     await ctx.send(msg_help)
     
         
