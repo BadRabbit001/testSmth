@@ -160,6 +160,11 @@ async def Hello(ctx):
 async def Yo(ctx):
     msg_help = 'type `help`'
     await ctx.send(msg_help)
+            
+@bot.command()
+async def rabbit(ctx):
+    msg_help = 'type `help`'
+    await ctx.send(msg_help)
         
         
 @bot.command()
