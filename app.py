@@ -171,6 +171,11 @@ async def rabbit(ctx):
 async def hola(ctx):
     msg_help = 'type `help`'
     await ctx.send(msg_help)
+            
+@bot.command()
+async def ?(ctx):
+    msg_help = 'type `help`'
+    await ctx.send(msg_help)
     
         
 @bot.command()
